@@ -15,8 +15,17 @@ function loadTasks() {
                             <i class="bi bi-trash-fill delete"></i>
                           </li>`;
     });
-    updateMessage();
+  } else {
+    const originalTasks = ["Daily Question", "Sheet Questions", "Javascript"];
+    originalTasks.forEach(task => {
+      tasks.innerHTML += `<li>
+                            <span>${task}</span>
+                            <i class="bi bi-trash-fill delete"></i>
+                          </li>`;
+      taskList.push(task);
+    });
   }
+  updateMessage();
 }
 
 // Save tasks to storage
@@ -25,10 +34,10 @@ function saveTasks() {
 }
 
 function updateMessage() {
-  const textLength = taskList.length;
+  const textLength = taskList.length + 3; // Add 3 for the original tasks
   messageSpan.textContent = `You have ${textLength} pending task${textLength !== 1 ? 's' : ''}.`;
 }
-updateMessage();
+
 // Add task
 addForm.addEventListener("submit", event => {
   event.preventDefault();
