@@ -15,16 +15,17 @@ function loadTasks() {
                             <i class="bi bi-trash-fill delete"></i>
                           </li>`;
     });
-  } else {
-    const originalTasks = ["Daily Question", "Sheet Questions", "Javascript"];
-    originalTasks.forEach(task => {
-      tasks.innerHTML += `<li>
-                            <span>${task}</span>
-                            <i class="bi bi-trash-fill delete"></i>
-                          </li>`;
-      taskList.push(task);
-    });
-  }
+  } 
+//   else {
+//     const originalTasks = ["Daily Question", "Sheet Questions", "Javascript"];
+//     originalTasks.forEach(task => {
+//       tasks.innerHTML += `<li>
+//                             <span>${task}</span>
+//                             <i class="bi bi-trash-fill delete"></i>
+//                           </li>`;
+//       taskList.push(task);
+//     });
+//   }
   updateMessage();
 }
 
