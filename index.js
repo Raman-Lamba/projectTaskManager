@@ -34,9 +34,10 @@ function saveTasks() {
 }
 
 function updateMessage() {
-  const textLength = taskList.length + 3; // Add 3 for the original tasks
+  const textLength = tasks.children.length; 
   messageSpan.textContent = `You have ${textLength} pending task${textLength !== 1 ? 's' : ''}.`;
 }
+updateMessage();
 
 // Add task
 addForm.addEventListener("submit", event => {
