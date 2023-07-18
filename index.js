@@ -28,7 +28,7 @@ function updateMessage() {
   const textLength = taskList.length;
   messageSpan.textContent = `You have ${textLength} pending task${textLength !== 1 ? 's' : ''}.`;
 }
-
+updateMessage();
 // Add task
 addForm.addEventListener("submit", event => {
   event.preventDefault();
