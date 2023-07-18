@@ -26,7 +26,7 @@ function saveTasks() {
 
 function updateMessage() {
   const textLength = taskList.length;
-  messageSpan.textContent = `You have ${textLength} pending tasks.`;
+  messageSpan.textContent = `You have ${textLength} pending task${textLength !== 1 ? 's' : ''}.`;
 }
 
 // Add task
